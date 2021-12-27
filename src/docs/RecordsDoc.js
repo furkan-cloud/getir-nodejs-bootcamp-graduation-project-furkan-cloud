@@ -39,23 +39,33 @@
  * @apiError (Error 4xx) NotFound          Response payload or page was not found.
  * @apiError (Error 4xx) BadRequest        The server could not understand the request due to invalid syntax.
  * @apiErrorExample {json} Error-Response:
- *     HTTP/1.2 400 Bad Request
+ *     HTTP/1.2 400 Bad Request (Validation Error)
  *     {
  *       "code": 2,
- *       "msg": "\"minCount\" must be greater than or equal to 0"
+ *       "msg": "\"minCount\" must be greater than or equal to 0",
+ *       "records": []
+ *     }
+ *  @apiErrorExample {json} Error-Response:
+ *     HTTP/1.3 400 Bad Request (Not Allowed Method)
+ *     {
+ *       "code": 4,
+ *       "msg": "This method is not allowed for /records",
+ *       "records": []
  *     }
  * @apiErrorExample {json} Error-Response:
- *     HTTP/1.3 404 Not Found
+ *     HTTP/1.4 404 Not Found
  *     {
  *       "code": 1,
- *       "msg": "No data found with that query"
+ *       "msg": "No data found with that query",
+ *       "records": []
  *     }
  *
  * @apiError (Error 5xx) InternalServer    Server encountered an unexpected condition that prevented it from fulfilling the request.
  * @apiErrorExample {json} Error-Response:
- *     HTTP/1.4 500 Internal Server Error
+ *     HTTP/1.5 500 Internal Server Error
  *     {
  *       "code": 3,
- *       "msg": "Something wrong happened in internal server"
+ *       "msg": "Something wrong happened in internal server",
+ *       "records": []
  *     }
  */

@@ -27,6 +27,12 @@ class ApiError extends Error {
     this.status = 500;
     return new ApiError(message, this.errorCode, this.status);
   }
+
+  static badRequest(message) {
+    this.errorCode = 4;
+    this.status = 400;
+    return new ApiError(message, this.errorCode, this.status);
+  }
 }
 
 module.exports = ApiError;
