@@ -1,6 +1,6 @@
 const Joi = require('joi').extend(require('@joi/date'));
 
-// Validation for get request for records
+// Validation object for get request for records
 const getRecords = Joi.object({
   startDate: Joi.date().format('YYYY-MM-DD').utc().required(),
   endDate: Joi.date()

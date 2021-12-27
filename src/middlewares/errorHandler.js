@@ -1,5 +1,6 @@
 const ApiError = require('../errors/ApiError');
 
+// error payload for development
 const sendErrorDev = (err, res) => {
   res.status(err.status).json({
     status: err.status,
@@ -10,6 +11,7 @@ const sendErrorDev = (err, res) => {
   });
 };
 
+// error payload for production
 const sendErrorProd = (err, res) => {
   res.status(err.status).json({
     code: err.errorCode,
@@ -18,11 +20,13 @@ const sendErrorProd = (err, res) => {
   });
 };
 
+// CastError Handler
 const handleCastErrorDB = (err) => {
   const message = `Invalid ${err.path}: ${err.value}`;
   return new ApiError(message, 2, 400);
 };
 
+// Error Handler for all errors
 module.exports = (err, req, res, next) => {
   err.status = err.status || 500;
   if (process.env.NODE_ENV === 'production') {
