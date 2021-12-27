@@ -1,0 +1,62 @@
+{
+  "name": "getir-nodejs-bootcamp-graduation-project-furkan-cloud",
+  "description": "getir nodejs bootcamp graduation project with express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-graduation-project-furkan-cloud.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "RESTful API",
+    "jest",
+    "heroku"
+  ],
+  "author": "furkan türkoğlu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-graduation-project-furkan-cloud/issues"
+  },
+  "homepage": "https://github.com/getir-nodejs-bootcamp/getir-nodejs-bootcamp-graduation-project-furkan-cloud#readme",
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.5.0",
+    "mongoose": "^6.1.3",
+    "morgan": "^1.10.0"
+  },
+  "apidoc": {
+    "title": "Case Project",
+    "name": "Case Study Project",
+    "description": "Getir Case Study Project",
+    "url": "https://furkan-turkoglu-getir-case.herokuapp.com",
+    "sampleUrl": "https://furkan-turkoglu-getir-case.herokuapp.com",
+    "header": {
+      "title": "Introduction",
+      "filename": "header.md"
+    },
+    "template": {
+      "showRequiredLabels": false,
+      "withCompare": true,
+      "withGenerator": true,
+      "aloneDisplay": false
+    }
+  }
+}
