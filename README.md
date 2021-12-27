@@ -16,6 +16,7 @@ There is one route for post requests and response will be records payload from d
 - You can download [yarn](https://yarnpkg.com/) from this address.
 - Clone this repo to your desktop and run `yarn install` to install all the dependencies.
 - You should look into `.env.example` to set neccessary environment variables before starting the project.
+- You can also install [apiDoc](https://apidocjs.com/#getting-started) `yarn global add apidoc` globally to see detailed documentation as your main page in your localhost.
 
 ## Run
 

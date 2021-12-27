@@ -13,7 +13,7 @@ describe('Test the validations for /records url', () => {
     Mongoose.disconnect(done);
   });
 
-  test('validation test for request params, status should be 400', async () => {
+  test('validation test for request params (startDate is in invalid format), status should be 400', async () => {
     await request(app)
       .post('/records')
       .send({
@@ -25,7 +25,7 @@ describe('Test the validations for /records url', () => {
       .expect(400);
   });
 
-  test('validation test for request params, status should be 400', async () => {
+  test('validation test for request params (minCount is not defined), status should be 400', async () => {
     await request(app)
       .post('/records')
       .send({
@@ -36,7 +36,7 @@ describe('Test the validations for /records url', () => {
       .expect(400);
   });
 
-  test('validation test for request params, status should be 400', async () => {
+  test('validation test for request params (minCount is greater than maxCount), status should be 400', async () => {
     await request(app)
       .post('/records')
       .send({

@@ -6,7 +6,6 @@ const RecordsSchema = new Schema(
   {
     key: {
       type: String,
-      unique: true,
     },
     value: {
       type: String,

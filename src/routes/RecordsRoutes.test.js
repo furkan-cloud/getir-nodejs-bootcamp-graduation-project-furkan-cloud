@@ -13,15 +13,15 @@ describe('Test the routes for records', () => {
     Mongoose.disconnect(done);
   });
 
-  test('It should not response the GET method', async () => {
-    await request(app).get('/records').expect(404);
+  test('It should not response the GET method for /records url', async () => {
+    await request(app).get('/records').expect(400);
   });
 
-  test('It should not response the GET method', async () => {
+  test('It should not response the GET method for undefined URL', async () => {
     await request(app).get('/recordss').expect(404);
   });
 
-  test('It should not response the GET method of undefined URL', async () => {
+  test('It should not response the GET method for undefined URL', async () => {
     await request(app).get('/data').expect(404);
   });
 });
