@@ -3,6 +3,9 @@
 This is a backend project for graduation from Patika.dev Getir Nodejs bootcamp which uses NodeJS, Express, MongoDB, ApiDoc and Jest.
 There is one route for post requests and response will be records payload from db.
 
+## Heroku Link
+https://furkan-turkoglu-getir-case.herokuapp.com/
+
 ## Description
 - This is a production ready RESTful API and user can fetch records according to specific queries
 - Error Handling implemented for catching internal server errors, validation errors and unknown url requests
